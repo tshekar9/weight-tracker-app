@@ -2,7 +2,7 @@
 
 A simple web application to log daily weight, visualize progress, and stay on track — built with **Flask**, **SQLAlchemy**, **Heroku**, and **Matplotlib**.
 
-Live demo: [https://weight-tracker-app.herokuapp.com](https://weight-tracker-app.herokuapp.com)
+Live demo: [https://weight-tracker-app.herokuapp.com](https://weight-tracker-app-bd46e6bcd775.herokuapp.com/login?next=%2F)
 
 ---
 
