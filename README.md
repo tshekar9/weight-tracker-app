@@ -33,45 +33,58 @@ Live demo: [https://weight-tracker-app.herokuapp.com](https://weight-tracker-app
 ```bash
 git clone https://github.com/tshekar9/weight-tracker-app.git
 cd weight-tracker-app
+```
 
-2. Set up a virtual environment
+### 2. Set up a virtual environment
 
+```bash
 python3 -m venv weight_tracker_env
 source weight_tracker_env/bin/activate
+```
 
-3. Install dependencies
+### 3. Install dependencies
 
+```bash
 pip install -r requirements.txt
+```
 
-4. Set environment variables
+### 4. Set environment variables
 
+```bash
 Create a .env file with:
 
 FLASK_APP=app.py
 SECRET_KEY=your-secret-key
 DATABASE_URL=sqlite:///weight_data.db  # for local testing
+```
 
-5. Initialize the database
+### 5. Initialize the database
 
+```bash
 flask db init
 flask db migrate -m "Initial migration"
 flask db upgrade
+```
 
-6. Run the app
+### 6. Run the app
 
+```bash
 flask run
+```
 
-☁️ Deploying to Heroku
+### ☁️ Deploying to Heroku
 
 Make sure you have the Heroku CLI installed and logged in.
 
+```bash
 heroku create weight-tracker-app
 heroku addons:create heroku-postgresql
 git push heroku main
 heroku run flask db upgrade
 heroku open
+```
 
-📌 Folder Structure
+### 📌 Folder Structure
 
 ├── app.py
 ├── templates/
@@ -83,17 +96,17 @@ heroku open
 ├── Procfile
 └── .python-version
 
-🙋‍♀️ Author
+### 🙋‍♀️ Author
 
 Tejaswini Shekar
-GitHub
+[GitHub](https://github.com/tshekar9)
 
-⭐ Future Improvements
+### ⭐ Future Improvements
 
-Add user dashboards with BMI and goal tracking
-Export weight data to CSV
-Email reminders or push notifications
+- Add user dashboards with BMI and goal tracking.
+- Export weight data to CSV.
+- Email reminders or push notifications to track daily.
 
-📝 License
+### 📝 License
 
 This project is open-source and available under the MIT License.
