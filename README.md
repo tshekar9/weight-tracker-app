@@ -34,16 +34,16 @@ Live demo: [https://weight-tracker-app.herokuapp.com](https://weight-tracker-app
 git clone https://github.com/tshekar9/weight-tracker-app.git
 cd weight-tracker-app
 
-### 2. Set up a virtual environment
+2. Set up a virtual environment
 
 python3 -m venv weight_tracker_env
 source weight_tracker_env/bin/activate
 
-### 3. Install dependencies
+3. Install dependencies
 
 pip install -r requirements.txt
 
-### 4. Set environment variables
+4. Set environment variables
 
 Create a .env file with:
 
@@ -51,13 +51,13 @@ FLASK_APP=app.py
 SECRET_KEY=your-secret-key
 DATABASE_URL=sqlite:///weight_data.db  # for local testing
 
-### 5. Initialize the database
+5. Initialize the database
 
 flask db init
 flask db migrate -m "Initial migration"
 flask db upgrade
 
-### 6. Run the app
+6. Run the app
 
 flask run
 
