@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+venv/
+env/
+weight_tracker_env/
+
+# Flask instance folder
+instance/
+
+# macOS system files
+.DS_Store
+
+# SQLite database 
+*.db
