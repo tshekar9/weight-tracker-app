@@ -10,6 +10,10 @@ import os
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 
+# Heroku workaround for SQLAlchemy postgres URL
+if os.getenv("DATABASE_URL", "").startswith("postgres://"):
+    os.environ["DATABASE_URL"] = os.environ["DATABASE_URL"].replace("postgres://", "postgresql://", 1)
+
 app = Flask(__name__)
 app.secret_key = os.getenv('SECRET_KEY', 'dev')
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///weight_data.db')
