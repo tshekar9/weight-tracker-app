@@ -23,7 +23,11 @@
           <strong>Weight Progress</strong>
         </div>
         <div class="card-body text-center">
-          <img src="{{ url_for('static', filename='plot.png') }}" class="img-fluid rounded" alt="Weight Plot">
+          {% if plot_url %}
+            <img src="data:image/png;base64,{{ plot_url }}" class="img-fluid rounded shadow" alt="Weight Plot">
+          {% else %}
+            <p>No data to display yet.</p>
+          {% endif %}
         </div>
       </div>
     </div>
