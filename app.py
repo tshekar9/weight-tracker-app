@@ -69,7 +69,7 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user and user.check_password(password):
             login_user(user)
-            return redirect(url_for('index'))
+            return redirect(url_for('dashboard'))
         flash('Invalid username or password')
     return render_template('login.html')
 
@@ -79,9 +79,9 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/dashboard', methods=['GET', 'POST'])
 @login_required
-def index():
+def dashboard():
     if request.method == 'POST':
         date = datetime.strptime(request.form['date'], '%Y-%m-%d').date()
         weight = float(request.form['weight'])
@@ -112,7 +112,13 @@ def index():
         img.seek(0)
         plot_url = base64.b64encode(img.getvalue()).decode()
 
-    return render_template('index.html', plot_url=plot_url, data=data)
+    return render_template('dashboard.html', plot_url=plot_url, data=data)
+
+@app.route('/')
+def index():
+    if current_user.is_authenticated:
+        return redirect(url_for('dashboard'))
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
