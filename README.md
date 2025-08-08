@@ -12,7 +12,7 @@ Live demo: [https://weight-tracker-app.herokuapp.com](https://weight-tracker-app
 - 📈 Visualize progress with real-time plots
 - 👤 User authentication (register, log in, log out)
 - 🗂️ Data stored securely using PostgreSQL
-- 🌐 Deployed on Heroku — accessible anywhere
+- 🌐 Deployed on Heroku — accessible from anywhere
 
 ---
 
@@ -104,7 +104,7 @@ Tejaswini Shekar
 ### ⭐ Future Improvements
 
 - Add user dashboards with BMI and goal tracking.
-- Export weight data to CSV.
+- Feature to allow export of data to CSV.
 - Email reminders or push notifications to track daily.
 
 ### 📝 License
